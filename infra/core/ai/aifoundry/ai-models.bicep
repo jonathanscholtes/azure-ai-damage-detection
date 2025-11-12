@@ -28,5 +28,45 @@ resource gpt4oDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-
 
 }
 
+resource gpt41Deployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
+  parent: account
+  name: 'gpt-4.1'
+  sku: {
+    name: 'GlobalStandard'
+    capacity: 152
+  }
+  properties: {
+    model: {
+      format: 'OpenAI'
+      name: 'gpt-4.1'
+      version: '2025-04-14'
+    }
+    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
+    raiPolicyName: 'Microsoft.DefaultV2'
+  }
+  dependsOn: [
+    gpt4oDeployment
+  ]
+}
 
+resource gpt5Deployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
+  parent: account
+  name: 'gpt-5-chat'
+  sku: {
+    name: 'GlobalStandard'
+    capacity: 430
+  }
+  properties: {
+    model: {
+      format: 'OpenAI'
+      name: 'gpt-5-chat'
+      version: '2025-10-03'
+    }
+    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
+    raiPolicyName: 'Microsoft.DefaultV2'
+  }
+  dependsOn: [
+    gpt41Deployment
+  ]
+}
 
