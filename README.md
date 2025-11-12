@@ -27,6 +27,7 @@ The agent:
 
 ---
 
+![design](/media/detection1.png)
 
 ## 🛠️ **Core Steps for Solution Implementation**
 
