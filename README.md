@@ -29,6 +29,8 @@ The agent:
 
 ![design](/media/detection1.png)
 
+---
+
 ## 🛠️ **Core Steps for Solution Implementation**
 
 Follow these key steps to successfully deploy and configure the solution:
@@ -36,6 +38,12 @@ Follow these key steps to successfully deploy and configure the solution:
 ### 1️⃣ [**Deploy the Solution**](docs/deployment.md)
 -  Instructions for deploying solution, including prerequisites, configuration steps.  
 
+### 2️⃣ [**Hands-On Notebook: Damage Detection with Semantic Kernel**](docs/notebooks.md)
+- Follow the guided notebook to create and test a few-shot Azure AI Agent that detects and describes vehicle damage using GPT-4o.
+
+
+
+---
 
 ## ♻️ **Clean-Up**
 

@@ -16,6 +16,21 @@ def fill_prompt(template, before_image, after_image ):
                    .replace("{{after_image}}", after_image)
 
 
+def load_example_pairs(json_path="example_pairs.json"):
+    with open(json_path, "r") as f:
+        data = json.load(f)
+    
+    # Return as a list of tuples (for backward compatibility) ## Upldate  build_damage_chat_with_image_examples
+    return [
+        (
+            item["before_image"],
+            item["after_image"],
+            tuple(item["image_size"]),
+            item["expected_output"]
+        )
+        for item in data
+    ]
+
 
 def build_damage_chat_with_image_examples(
     before_image: str,
@@ -40,7 +55,7 @@ def build_damage_chat_with_image_examples(
                         text=(
                             f"Example {i}:\n"
                             f"Here are BEFORE and AFTER images of a damaged vehicle.\n"
-                            f"Each image is {size[0]}px wide and {size[1]}px tall.\n"
+                            f"Each image dimension is (width={size[0]}, height={size[1]}).\n"
                             f"Below is the correct analysis JSON for this pair:\n\n"
                             f"{json.dumps(ex_json, indent=2)}"
                         )

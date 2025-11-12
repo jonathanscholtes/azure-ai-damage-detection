@@ -1,0 +1,87 @@
+[
+  {
+    "before_image": "../../data/transformed/truck_2_orig.jpg",
+    "after_image": "../../data/transformed/truck_2_damage.png",
+    "image_size": [1536, 1024],
+    "expected_output": {
+      "damage_summary": "Dent driver side hood and scratches on driver side door and rear fender.",
+      "damage_locations": [
+        {
+          "type": "dent",
+          "severity": "medium",
+          "confidence": 0.9,
+          "bounding_box": { "x_min": 453, "y_min": 470, "x_max": 595, "y_max": 544 }
+        },
+        {
+          "type": "scratch",
+          "severity": "medium",
+          "confidence": 0.85,
+          "bounding_box": { "x_min": 759, "y_min": 501, "x_max": 908, "y_max": 616 }
+        },
+        {
+          "type": "scratch",
+          "severity": "medium",
+          "confidence": 0.8,
+          "bounding_box": { "x_min": 1010, "y_min": 408, "x_max": 1104, "y_max": 507 }
+        }
+      ]
+    }
+  },
+  {
+    "before_image": "../../data/transformed/truck_1_orig.jpg",
+    "after_image": "../../data/transformed/truck_1_damage2.png",
+    "image_size": [1536, 1024],
+    "expected_output": {
+      "damage_summary": "Dent driver side door and scratches on driver side door and rear fender.",
+      "damage_locations": [
+        {
+          "type": "dent",
+          "severity": "low",
+          "confidence": 0.75,
+          "bounding_box": { "x_min": 523, "y_min": 557, "x_max": 590, "y_max": 601 }
+        },
+        {
+          "type": "scratch",
+          "severity": "high",
+          "confidence": 0.9,
+          "bounding_box": { "x_min": 665, "y_min": 482, "x_max": 823, "y_max": 559 }
+        },
+        {
+          "type": "scratch",
+          "severity": "high",
+          "confidence": 0.95,
+          "bounding_box": { "x_min": 968, "y_min": 566, "x_max": 1056, "y_max": 629 }
+        },
+         {
+          "type": "scratch",
+          "severity": "low",
+          "confidence": 0.85,
+          "bounding_box": { "x_min": 1128, "y_min": 573, "x_max": 1292, "y_max": 626 }
+        }
+      ]
+    }
+  },
+  {
+    "before_image": "../../data/transformed/truck_4_orig.jpg",
+    "after_image": "../../data/transformed/truck_4_damage.png",
+    "image_size": [1536, 1024],
+    "expected_output": {
+      "damage_summary": "Large dent passenger side door and smaller dent on the front right panel.",
+      "damage_locations": [
+        {
+          "type": "dent",
+          "severity": "high",
+          "confidence": 0.95,
+          "bounding_box": { "x_min": 756, "y_min": 391, "x_max": 1030, "y_max": 568 }
+        },
+        {
+          "type": "dent",
+          "severity": "low",
+          "confidence": 0.8,
+          "bounding_box": { "x_min": 1132, "y_min": 479, "x_max": 1250, "y_max": 556 }
+        }
+
+      ]
+    }
+  }
+]

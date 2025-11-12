@@ -6,3 +6,4 @@ Test/
 *.zip
 __pycache__/
 
+data/transformed/
