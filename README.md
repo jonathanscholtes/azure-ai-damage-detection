@@ -49,4 +49,4 @@ This project is licensed under the [MIT License](LICENSE.md), granting permissio
 ---
 
 ## Disclaimer  
-This workshop and demo application are intended for educational and demonstration purposes. It is provided "as-is" without any warranties, and users assume all responsibility for its use.
+This code and demo application are intended for educational and demonstration purposes. It is provided "as-is" without any warranties, and users assume all responsibility for its use.
